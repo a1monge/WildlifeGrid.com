@@ -2,6 +2,10 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    /* Hide horizontal scrollbar */
+    overflow-y: auto;
+    /* Add vertical scrollbar if necessary */
     font-family: "Sanchez", serif;
     font-weight: 400;
     font-style: normal;
@@ -9,6 +13,24 @@ body {
     /* Light grey background */
     color: #333;
     /* Dark grey text */
+}
+
+/* Track */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+    /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #333;
+    /* Color of the scrollbar handle on hover */
 }
 
 header {
