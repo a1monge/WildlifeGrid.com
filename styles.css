@@ -25,12 +25,18 @@ header {
 h1 {
     font-family: "Protest Guerrilla", sans-serif;
     font-weight: 400;
-    font-style: normal;
+    font-style: bold;
     font-size: 66px;
-    color: #1a5b36;
+    color: white;
     /* Darker green text */
     margin-bottom: 10px;
     /* Add some space below the title */
+}
+
+h2 {
+    color: white;
+    font-style: bold;
+    /* Darker green text */
 }
 
 nav {
@@ -91,10 +97,7 @@ nav {
     margin-top: 40px;
 }
 
-h2 {
-    color: #2e7d32;
-    /* Darker green text */
-}
+
 
 .search-container {
     background-color: #eaf4ea;
@@ -182,48 +185,27 @@ ul {
 }
 
 .birds-ribbon {
-    background-image: url('bird1.png');
-    background-repeat: repeat-x;
-    background-position: left;
-    background-size: auto 100%;
-    /* Adjusted background size */
-    padding: 60px 0;
+    background-color: black;
+    /* Sage green color */
+    padding: 20px;
     /* Adjusted padding */
-    height: auto;
-    /* Adjusted height */
+    color: white;
+    /* Text color */
+    text-align: center;
+    /* Center-align text */
 }
 
 .slideshow-container {
     position: relative;
     width: 100%;
     /* Set width to 100% to cover the entire page */
-    height: 600px;
+    height: 700px;
     /* Adjust height as needed */
     overflow: hidden;
 }
 
 .slide {
     display: none;
-}
-
-
-
-@keyframes fadeEffect {
-    0% {
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
 }
 
 .text {
