@@ -38,7 +38,7 @@ header {
     /* Remove the background color */
     padding: 40px;
     /* Increase the padding to make the header taller */
-    color: white;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,9 +56,13 @@ h1 {
 }
 
 h2 {
-    color: white;
+    color: black;
     font-style: bold;
     /* Darker green text */
+}
+
+.slideshow-container h2 {
+    color: white;
 }
 
 nav {
@@ -122,18 +126,26 @@ nav {
 
 
 .search-container {
-    background-color: transparent;
-    /* Light green background */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+    display: flex;
 }
 
-.search-container input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.search-container img {
+    width: 150px;
+    /* Adjust image size as needed */
+    height: 150px;
+    margin-right: 10px;
+    /* Add some space between images */
+    cursor: pointer;
+    /* Change cursor to pointer on hover */
+}
+
+.search-input {
+    display: none;
+}
+
+.hidden {
+    display: none !important;
+    /* Hide by default */
 }
 
 .search-container button {
@@ -245,4 +257,11 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.search h2 {
+    color: #333;
+    /* Dark grey text */
+    font-weight: bold;
+    /* Optionally make the text bold */
 }
