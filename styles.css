@@ -9,7 +9,7 @@ body {
     font-family: "Protest Guerrilla", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: white;
+    background-color: #d3efa4;
     /* Light grey background */
     color: #333;
     /* Dark grey text */
@@ -38,7 +38,7 @@ header {
     /* Remove the background color */
     padding: 40px;
     /* Increase the padding to make the header taller */
-    color: darkgreen;
+    color: #00AA67;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,14 +49,14 @@ h1 {
     font-weight: 400;
     font-style: bold;
     font-size: 85px;
-    color: white;
+    color: #00AA67;
     /* Darker green text */
     margin-bottom: 10px;
     /* Add some space below the title */
 }
 
 h2 {
-    color: darkgreen;
+    color: #00AA67;
     font-style: bold;
     /* Darker green text */
     font-size: 33px;
@@ -222,7 +222,7 @@ ul {
 }
 
 .birds-ribbon {
-    background-color: black;
+    background-color: #00AA67;
     /* Sage green color */
     padding: 20px;
     /* Adjusted padding */
@@ -254,7 +254,7 @@ ul {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: white;
+    color: #00AA67;
     font-size: 24px;
     /* Add other styles as needed */
 }
@@ -266,7 +266,7 @@ ul {
 }
 
 .search h2 {
-    color: darkgreen;
+    color: #00AA67;
     /* Dark grey text */
     font-weight: bold;
     /* Optionally make the text bold */
@@ -302,7 +302,7 @@ ul {
     left: 0;
     right: 0;
     text-align: center;
-    color: darkgreen;
+    color: white;
 }
 
 .card .button-container {
@@ -329,15 +329,15 @@ ul {
 
 .logo {
     position: absolute;
-    top: 25%;
+    top: 30%;
     /* Adjust as needed */
-    left: 30%;
+    left: 35%;
     /* Adjust as needed */
     z-index: 2;
     /* Ensure the logo appears above the slides */
-    width: 40%;
+    width: 35%;
     /* Adjust the size of your logo */
-    height: 40%;
+    height: 35%;
 }
 
 .slideshow-container {
