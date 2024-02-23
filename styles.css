@@ -335,9 +335,9 @@ ul {
     /* Adjust as needed */
     z-index: 2;
     /* Ensure the logo appears above the slides */
-    width: 45%;
+    width: 40%;
     /* Adjust the size of your logo */
-    height: 45%;
+    height: 40%;
 }
 
 .slideshow-container {
