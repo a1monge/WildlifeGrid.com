@@ -348,3 +348,19 @@ ul {
     /* Adjust height as needed */
     overflow: hidden;
 }
+
+.white-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    /* Adjust the font size as needed */
+}
+
+.white-text a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    /* Adjust spacing between links */
+}
