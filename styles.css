@@ -329,15 +329,15 @@ ul {
 
 .logo {
     position: absolute;
-    top: 35%;
+    top: 25%;
     /* Adjust as needed */
     left: 30%;
     /* Adjust as needed */
     z-index: 2;
     /* Ensure the logo appears above the slides */
-    width: 80%;
+    width: 45%;
     /* Adjust the size of your logo */
-    height: 80%;
+    height: 45%;
 }
 
 .slideshow-container {
