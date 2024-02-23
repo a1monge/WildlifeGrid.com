@@ -279,15 +279,14 @@ ul {
 .card {
     flex-basis: 20%;
     border-radius: 10px;
-    overflow: hidden;
     position: relative;
     margin: 0 5px;
 }
 
+
 .card img {
     width: 100%;
-    height: auto;
-    height: 150px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -297,7 +296,14 @@ ul {
     left: 0;
     right: 0;
     text-align: center;
-    color: white;
+    color: black;
+}
+
+.card .button-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .button {
@@ -313,4 +319,3 @@ ul {
 .button:hover {
     background-color: #45a049;
 }
-
