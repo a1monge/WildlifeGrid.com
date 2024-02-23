@@ -123,7 +123,7 @@ nav {
 .newsletter,
 .social {
     margin-top: 40px;
-    
+
 }
 
 
@@ -329,15 +329,15 @@ ul {
 
 .logo {
     position: absolute;
-    top: 5%;
+    top: 35%;
     /* Adjust as needed */
-    left: 5%;
+    left: 30%;
     /* Adjust as needed */
     z-index: 2;
     /* Ensure the logo appears above the slides */
-    width: 150%;
+    width: 40%;
     /* Adjust the size of your logo */
-    height: 150%;
+    height: 40%;
 }
 
 .slideshow-container {
