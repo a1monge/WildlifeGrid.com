@@ -364,3 +364,69 @@ ul {
     margin: 0 10px;
     /* Adjust spacing between links */
 }
+
+/* Add this to your styles.css file */
+
+.login-form,
+.signup-form {
+    width: 300px;
+    /* Adjust width as needed */
+    margin: 0 auto;
+    /* Center the form horizontally */
+    padding: 20px;
+    background-color: #ffffff;
+    /* White background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+}
+
+.signup-form h1,
+.login-form h1 {
+    font-size: 24px;
+    color: #333333;
+    /* Darker text color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.signup-form label,
+.login-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333333;
+    /* Darker text color */
+}
+
+.signup-form input[type="email"],
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    /* Light gray border */
+    border-radius: 5px;
+}
+
+.signup-form button,
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00AA67;
+    /* Sage green color */
+    color: #ffffff;
+    /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover,
+.login-form button:hover {
+    background-color: #008E58;
+    /* Darker green color on hover */
+}
