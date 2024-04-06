@@ -130,7 +130,11 @@ nav {
     display: flex;
     justify-content: center;
     /* Center the search bar horizontally */
-    margin-top: 50px;
+
+    margin: 250px auto 0;
+    /* Center the form horizontally and add 100px margin from the top */
+    padding: 20px;
+
     /* Add some top margin for spacing */
 }
 
@@ -358,6 +362,21 @@ ul {
     transform: translateX(-50%);
     z-index: 2;
     /* Ensure the logo appears above the forms */
+}
+
+.search-page .logo {
+    position: absolute;
+    top: 90px;
+    /* Adjust as needed */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 2;
+    /* Ensure the logo appears above the forms */
+    width: 400px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
 }
 
 
