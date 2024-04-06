@@ -126,29 +126,20 @@ nav {
 
 }
 
-
-
 .search-container {
     display: flex;
+    justify-content: center;
+    /* Center the search bar horizontally */
+    margin-top: 50px;
+    /* Add some top margin for spacing */
 }
 
-.search-container img {
-    width: 150px;
-    /* Adjust image size as needed */
-    height: 150px;
-    margin-right: 10px;
-    /* Add some space between images */
-    cursor: pointer;
-    /* Change cursor to pointer on hover */
-}
-
-.search-input {
-    display: none;
-}
-
-.hidden {
-    display: none !important;
-    /* Hide by default */
+.search-container input[type="text"] {
+    width: 300px;
+    /* Adjust the width as needed */
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
 }
 
 .search-container button {
@@ -156,8 +147,8 @@ nav {
     /* Darker green button */
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -165,6 +156,11 @@ nav {
 .search-container button:hover {
     background-color: #1b5e20;
     /* Dark green on hover */
+}
+
+.search-container button i {
+    font-size: 20px;
+    /* Adjust the size of the icon */
 }
 
 ul {
@@ -365,6 +361,8 @@ ul {
     /* Adjust spacing between links */
 }
 
+
+
 /* Add this to your styles.css file */
 
 .login-form,
@@ -374,10 +372,10 @@ ul {
     margin: 0 auto;
     /* Center the form horizontally */
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #d3efa4;
     /* White background */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     /* Shadow effect */
 }
 
@@ -403,7 +401,7 @@ ul {
 .signup-form input[type="password"],
 .login-form input[type="text"],
 .login-form input[type="password"] {
-    width: 100%;
+    width: 93%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #cccccc;
@@ -415,7 +413,7 @@ ul {
 .login-form button {
     width: 100%;
     padding: 10px;
-    background-color: #00AA67;
+    background-color: #008E58;
     /* Sage green color */
     color: #ffffff;
     /* White text color */
@@ -425,8 +423,26 @@ ul {
     transition: background-color 0.3s;
 }
 
-.signup-form button:hover,
-.login-form button:hover {
-    background-color: #008E58;
-    /* Darker green color on hover */
+.search-wrapper {
+    border-radius: 50px;
+    /* Half of the desired height */
+    overflow: hidden;
+    /* Ensure the input field doesn't overflow the rounded corners */
+}
+
+.search-wrapper input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: none;
+}
+
+.search-text {
+    text-align: center;
+    /* Center align the text */
+    color: #000;
+    /* Black text color */
+    font-weight: bold;
+    /* Bold font */
+    margin-top: 20px;
+    /* Add some top margin */
 }
