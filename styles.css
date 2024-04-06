@@ -139,7 +139,8 @@ nav {
     /* Adjust the width as needed */
     padding: 10px;
     border: none;
-    border-radius: 5px 0 0 5px;
+    border-radius: 0;
+    /* Remove border-radius */
 }
 
 .search-container button {
@@ -336,6 +337,30 @@ ul {
     height: 35%;
 }
 
+.login-page .logo {
+    position: absolute;
+    top: 80px;
+    /* Adjust as needed */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 2;
+    /* Ensure the logo appears above the forms */
+}
+
+/* Styles specific to signup page */
+.signup-page .logo {
+    position: absolute;
+    top: 80px;
+    /* Adjust as needed */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 2;
+    /* Ensure the logo appears above the forms */
+}
+
+
 .slideshow-container {
     position: relative;
     width: 100%;
@@ -369,24 +394,16 @@ ul {
 .signup-form {
     width: 300px;
     /* Adjust width as needed */
-    margin: 0 auto;
-    /* Center the form horizontally */
+    margin: 230px auto 0;
+    /* Center the form horizontally and add 100px margin from the top */
     padding: 20px;
     background-color: #d3efa4;
     /* White background */
     border-radius: 10px;
-
     /* Shadow effect */
 }
 
-.signup-form h1,
-.login-form h1 {
-    font-size: 24px;
-    color: #333333;
-    /* Darker text color */
-    margin-bottom: 20px;
-    text-align: center;
-}
+
 
 .signup-form label,
 .login-form label {
@@ -423,17 +440,36 @@ ul {
     transition: background-color 0.3s;
 }
 
-.search-wrapper {
-    border-radius: 50px;
-    /* Half of the desired height */
-    overflow: hidden;
-    /* Ensure the input field doesn't overflow the rounded corners */
+.signup-link {
+    text-align: center;
+    /* Center align the text */
+    color: #000;
+    /* Black text color */
+    font-weight: bold;
+    margin-top: 20px;
+    /* Add some top margin */
 }
 
-.search-wrapper input[type="text"] {
-    width: 300px;
-    padding: 10px;
+.search-container button {
+    background-color: #2e7d32;
+    /* Darker green button */
+    color: white;
     border: none;
+    padding: 10px;
+    border-radius: 0px;
+    /* Set border-radius to 0 to remove rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #1b5e20;
+    /* Dark green on hover */
+}
+
+.search-container button i {
+    font-size: 20px;
+    /* Adjust the size of the icon */
 }
 
 .search-text {

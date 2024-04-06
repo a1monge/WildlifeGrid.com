@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="signup-page">
 
     <header class="birds-ribbon">
         <div class="bird bird1"></div> <!-- Add the bird here -->
@@ -21,10 +21,11 @@
         </div>
     </header>
 
+    <!-- Add logo image -->
+    <img src="logo.png" alt="Logo" class="logo ">
+
     <div class="container">
         <form action="#" class="signup-form">
-            <!-- Added a class for styling -->
-            <h1>Sign Up</h1> <!-- Moved from header -->
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required> <!-- Added email field -->
             <label for="username">Username:</label>
@@ -33,6 +34,10 @@
             <input type="password" id="password" name="password" required>
             <button type="submit" class="signup-submit-btn">Sign Up</button>
         </form>
+    </div>
+    <div class="signup-link">
+        <!-- Added signup button -->
+        <p>Already Have an Account?<a href="login.html"> Login</a></p>
     </div>
 
 </body>

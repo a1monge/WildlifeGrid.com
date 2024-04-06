@@ -24,25 +24,26 @@
 
     <div class="search-container">
         <div class="search-wrapper">
-            <input type="text" id="searchInput" placeholder="Search animals or plants...">
+            <input type="text" id="searchInput" placeholder="Search animals or plants..."
+                onkeypress="handleKeyPress(event)">
             <button onclick="searchWiki()"><i class="fas fa-search"></i></button>
         </div>
     </div>
-        <p class="search-text">Search for the names of the wildlife you like</p>
+    <p class="search-text">Search for the names of the wildlife you like</p>
     </div>
 
     <script>
         function searchWiki() {
-            // Get the value from the search input
-            var searchTerm = document.getElementById("searchInput").value;
-
-            // If the search term is not empty
-            if (searchTerm.trim() !== "") {
-                // Construct the Wikipedia URL based on the search term
+            var searchTerm = document.getElementById("searchInput").value.trim();
+            if (searchTerm !== "") {
                 var wikipediaURL = "https://en.wikipedia.org/wiki/" + searchTerm;
-
-                // Open the Wikipedia page in a new tab
                 window.open(wikipediaURL, "_blank");
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                searchWiki();
             }
         }
     </script>
