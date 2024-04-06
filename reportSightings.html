@@ -1,10 +1,72 @@
-<header class="birds-ribbon">
-    <div class="bird bird1"></div> <!-- Add the bird here -->
-    <div class="white-text">
-        <a href="index.html">Home</a>
-        <a href="login.html">Login</a>
-        <a href="reportSightings.html">Report Sighting</a>
-        <a href="map.html">Map</a>
-        <a href="search.html">Search</a>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildlifeGrid.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="birds-ribbon">
+        <div class="bird bird1"></div> <!-- Add the bird here -->
+        <div class="white-text">
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="reportSightings.html">Report Sighting</a>
+            <a href="map.html">Map</a>
+            <a href="search.html">Search</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="button-container">
+            <button onclick="showAnimalForm()">Animals</button>
+            <button onclick="showPlantForm()">Plants</button>
+        </div>
+        <div id="animalForm" style="display:none;">
+            <h2>Report Animal Sighting</h2>
+            <form id="animalSightingForm" action="#" class="sighting-form">
+                <label for="animalName">Name:</label>
+                <input type="text" id="animalName" name="animalName" required>
+                <label for="animalSpecies">Species:</label>
+                <input type="text" id="animalSpecies" name="animalSpecies" required>
+                <label for="animalRegion">Region:</label>
+                <input type="text" id="animalRegion" name="animalRegion" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="plantForm" style="display:none;">
+            <h2>Report Plant Sighting</h2>
+            <form id="plantSightingForm" action="#" class="sighting-form">
+                <label for="plantName">Name:</label>
+                <input type="text" id="plantName" name="plantName" required>
+                <label for="plantSpecies">Species:</label>
+                <input type="text" id="plantSpecies" name="plantSpecies" required>
+                <label for="plantRegion">Region:</label>
+                <input type="text" id="plantRegion" name="plantRegion" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-</header>
+
+    <script>
+        function showAnimalForm() {
+            document.getElementById("animalForm").style.display = "block";
+            document.getElementById("plantForm").style.display = "none";
+        }
+
+        function showPlantForm() {
+            document.getElementById("animalForm").style.display = "none";
+            document.getElementById("plantForm").style.display = "block";
+        }
+    </script>
+
+</body>
+
+</html>
