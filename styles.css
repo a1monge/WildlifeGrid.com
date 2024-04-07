@@ -569,7 +569,7 @@ ul {
 .sighting-form label {
     display: block;
     margin-bottom: 5px;
-    color: #333333;
+    color: black;
     /* Darker text color */
 }
 
@@ -596,4 +596,26 @@ ul {
 .sighting-form button:hover {
     background-color: #00653F;
     /* Dark green on hover */
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f6ffe6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: 60%;
+    height: 50%;
+
+}
+
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
 }

@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WildlifeGrid.com</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildlifeGrid.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,16 +37,22 @@
         <!-- Heading text on the bottom center of the page -->
         <h2 class="bottom-heading">What kind of wildlife <br> do you want to report?<br> Click on the type you do!</h2>
         <!-- Animal and Plant sighting forms -->
-        <div id="animalForm" style="display:none;">
+        <div id="animalForm" class="popup" style="display:none;">
+            <span class="close" onclick="closeForm('animalForm')">x</span>
             <h2>Report Animal Sighting</h2>
             <form id="animalSightingForm" action="#" class="sighting-form">
                 <!-- Form fields for reporting animal sightings -->
+                <!-- Add your form fields here -->
+                <button type="submit" onclick="closeForm('animalForm')">Submit</button>
             </form>
         </div>
-        <div id="plantForm" style="display:none;">
+        <div id="plantForm" class="popup" style="display:none;">
+            <span class="close" onclick="closeForm('plantForm')">x</span>
             <h2>Report Plant Sighting</h2>
             <form id="plantSightingForm" action="#" class="sighting-form">
                 <!-- Form fields for reporting plant sightings -->
+                <!-- Add your form fields here -->
+                <button type="submit" onclick="closeForm('plantForm')">Submit</button>
             </form>
         </div>
     </div>
@@ -60,6 +66,10 @@
         function showPlantForm() {
             document.getElementById("animalForm").style.display = "none";
             document.getElementById("plantForm").style.display = "block";
+        }
+
+        function closeForm(formId) {
+            document.getElementById(formId).style.display = "none";
         }
     </script>
 
