@@ -23,7 +23,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: grey;
+    background: #00AA67;
     /* Color of the scrollbar handle */
 }
 
@@ -130,7 +130,11 @@ nav {
     display: flex;
     justify-content: center;
     /* Center the search bar horizontally */
-    margin-top: 50px;
+
+    margin: 250px auto 0;
+    /* Center the form horizontally and add 100px margin from the top */
+    padding: 20px;
+
     /* Add some top margin for spacing */
 }
 
@@ -360,6 +364,21 @@ ul {
     /* Ensure the logo appears above the forms */
 }
 
+.search-page .logo {
+    position: absolute;
+    top: 90px;
+    /* Adjust as needed */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    z-index: 2;
+    /* Ensure the logo appears above the forms */
+    width: 400px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
 
 .slideshow-container {
     position: relative;
@@ -394,9 +413,9 @@ ul {
 .signup-form {
     width: 300px;
     /* Adjust width as needed */
-    margin: 230px auto 0;
+    margin: 170px auto 0;
     /* Center the form horizontally and add 100px margin from the top */
-    padding: 20px;
+    padding: 10px;
     background-color: #d3efa4;
     /* White background */
     border-radius: 10px;
@@ -429,7 +448,7 @@ ul {
 .signup-form button,
 .login-form button {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     background-color: #008E58;
     /* Sage green color */
     color: #ffffff;
@@ -444,9 +463,8 @@ ul {
     text-align: center;
     /* Center align the text */
     color: #000;
-    /* Black text color */
-    font-weight: bold;
-    margin-top: 20px;
+    font-size: 23px;
+    margin-top: 10px;
     /* Add some top margin */
 }
 
@@ -476,9 +494,75 @@ ul {
     text-align: center;
     /* Center align the text */
     color: #000;
-    /* Black text color */
-    font-weight: bold;
+    font-size: 23px;
     /* Bold font */
-    margin-top: 20px;
+    margin-top: 10px;
     /* Add some top margin */
+}
+
+/* Add your CSS styles here */
+/* You can style the form elements, buttons, etc. according to your preferences */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    margin-right: 20px;
+    background-color: #2e7d32;
+    /* Darker green button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+    background-color: #1b5e20;
+    /* Dark green on hover */
+}
+
+.sighting-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.sighting-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333333;
+    /* Darker text color */
+}
+
+.sighting-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    /* Light gray border */
+    border-radius: 5px;
+}
+
+.sighting-form button {
+    background-color: #008E58;
+    /* Sage green color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sighting-form button:hover {
+    background-color: #00653F;
+    /* Dark green on hover */
 }
