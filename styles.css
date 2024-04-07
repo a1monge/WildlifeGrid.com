@@ -608,9 +608,16 @@ ul {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 999;
-    width: 60%;
-    height: 50%;
+    width: 70%;
+    height: 60%;
 
+}
+
+.popup button {
+    display: block;
+    /* Ensure the button takes up the full width */
+    margin: 0 auto;
+    /* Center the button horizontally */
 }
 
 .popup .close {
