@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WildlifeGrid.com</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WildlifeGrid.com</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header class="birds-ribbon">
-        <div class="bird bird1"></div> <!-- Add the bird here -->
+        <div class="bird bird1"></div>
         <div class="white-text">
             <a href="index.html">Home</a>
             <a href="login.html">Login</a>
@@ -25,36 +25,28 @@
     </header>
 
     <div class="container">
+        <!-- Picture above each button -->
         <div class="button-container">
+            <img src="animal_picture.jpg" alt="Animal Picture">
             <button onclick="showAnimalForm()">Animals</button>
+            <img src="plant_picture.jpg" alt="Plant Picture">
             <button onclick="showPlantForm()">Plants</button>
         </div>
+        <!-- Report logo on the bottom left part of the page -->
+        <img src="img/reportlogo.png" alt="Report Logo" class="report-logo">
+        <!-- Heading text on the bottom center of the page -->
+        <h2 class="bottom-heading">What kind of wildlife <br> do you want to report?<br> Click on the type you do!</h2>
+        <!-- Animal and Plant sighting forms -->
         <div id="animalForm" style="display:none;">
             <h2>Report Animal Sighting</h2>
             <form id="animalSightingForm" action="#" class="sighting-form">
-                <label for="animalName">Name:</label>
-                <input type="text" id="animalName" name="animalName" required>
-                <label for="animalSpecies">Species:</label>
-                <input type="text" id="animalSpecies" name="animalSpecies" required>
-                <label for="animalRegion">Location:</label>
-                <input type="text" id="animalRegion" name="animalRegion" required>
-                <label for="date">Date Sighted:</label>
-                <input type="text" id="date" name="date" required>
-                <button type="submit">Submit</button>
+                <!-- Form fields for reporting animal sightings -->
             </form>
         </div>
         <div id="plantForm" style="display:none;">
             <h2>Report Plant Sighting</h2>
             <form id="plantSightingForm" action="#" class="sighting-form">
-                <label for="plantName">Name:</label>
-                <input type="text" id="plantName" name="plantName" required>
-                <label for="plantSpecies">Species:</label>
-                <input type="text" id="plantSpecies" name="plantSpecies" required>
-                <label for="plantRegion">Location:</label>
-                <input type="text" id="plantRegion" name="plantRegion" required>
-                <label for="date">Date Sighted:</label>
-                <input type="text" id="date" name="date" required>
-                <button type="submit">Submit</button>
+                <!-- Form fields for reporting plant sightings -->
             </form>
         </div>
     </div>
