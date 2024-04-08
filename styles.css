@@ -13,7 +13,21 @@ body {
     /* Light grey background */
     color: #333;
     /* Dark grey text */
+    
 }
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .protest-guerrilla-regular {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
 
 /* Track */
 ::-webkit-scrollbar {
@@ -49,18 +63,19 @@ h1 {
     font-weight: 400;
     font-style: bold;
     font-size: 85px;
-    color: #00AA67;
+    color: #181a19;
     /* Darker green text */
     margin-bottom: 10px;
     /* Add some space below the title */
 }
 
 h2 {
-    color: #00AA67;
+    color: #181a19;
     font-style: bold;
     /* Darker green text */
     font-size: 33px;
     align-items: center;
+    text-align: center;
 }
 
 .slideshow-container h2 {
@@ -129,7 +144,7 @@ nav {
 .search-container {
     display: flex;
     justify-content: center;
-    /* Center the search bar horizontally */
+    /* Center the  bar horizontally */
 
     margin: 250px auto 0;
     /* Center the form horizontally and add 100px margin from the top */
@@ -267,15 +282,15 @@ ul {
 }
 
 .search h2 {
-    color: #00AA67;
+    color: #303634;
     /* Dark grey text */
-    font-weight: bold;
+   /* font-weight: bold; */
     /* Optionally make the text bold */
 }
 
 
 /* CSS for cards */
-.card-container {
+/*.card-container {
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
@@ -293,8 +308,7 @@ ul {
     width: 100%;
     height: auto;
     object-fit: cover;
-    filter: blur(1.5px);
-    /* Adjust the blur intensity as needed */
+    /*filter: blur(1.5px);
 }
 
 .card .text {
@@ -317,7 +331,7 @@ ul {
 .button {
     display: inline-block;
     padding: 8px 16px;
-    background-color: #4CAF50;
+    background-color: #45a049;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -326,7 +340,68 @@ ul {
 
 .button:hover {
     background-color: #45a049;
+}*/
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
+
+.card {
+    flex-basis: 20%;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 5px;
+    overflow: hidden;
+}
+
+.card button {
+    width: 100%;
+    height: 100%; /* Set height to match the aspect ratio of the images */
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(38, 43, 39);
+    z-index: 2;
+    font-size: 50px;
+    font-family: "Protest Guerrilla" , sans-serif; 
+}
+
+.button {
+    position: relative;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 239, 164, 0); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.button:hover::before {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust hover opacity as needed */
+}
+
 
 .logo {
     position: absolute;
