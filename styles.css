@@ -29,6 +29,14 @@ body {
   }
   
 
+.nav-link.active {
+    color: black;
+    /* Change color of active link to white */
+    background-color: white;
+    /* Highlight color for active link */
+
+}
+
 /* Track */
 ::-webkit-scrollbar {
     width: 10px;
@@ -85,6 +93,13 @@ h2 {
 nav {
     display: flex;
     align-items: center;
+}
+
+button {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
 }
 
 .login-btn {
@@ -436,7 +451,7 @@ ul {
 .signup-form {
     width: 300px;
     /* Adjust width as needed */
-    margin: 220px auto 0;
+    margin: 210px auto 0;
     /* Center the form horizontally and add 100px margin from the top */
     padding: 10px;
     background-color: #d3efa4;
@@ -470,6 +485,7 @@ ul {
 
 .signup-form button,
 .login-form button {
+
     width: 100%;
     padding: 20px;
     background-color: #008E58;
