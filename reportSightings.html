@@ -25,28 +25,51 @@
 
     <div class="container">
         <!-- Picture above each button -->
-        <div class="button-container">
-            <img src="animal_picture.jpg" alt="Animal Picture">
-            <button onclick="showAnimalForm()">Animals</button>
-            <img src="plant_picture.jpg" alt="Plant Picture">
-            <button onclick="showPlantForm()">Plants</button>
+        <div class="image-container">
+            <div>
+                <img src="img/fox.png" alt="Fox Picture" id="fox-animal">
+                <button onclick="showAnimalForm()">Animals</button>
+            </div>
+            <div>
+                <img src="img/plant.png" alt="Plant Picture" id="plant-plant">
+                <button onclick="showPlantForm()">Plants</button>
+            </div>
         </div>
-        <!-- Report logo on the bottom left part of the page -->
         <img src="img/reportlogo.png" alt="Report Logo" class="report-logo">
         <!-- Heading text on the bottom center of the page -->
         <h2 class="bottom-heading">What kind of wildlife <br> do you want to report?<br> Click on the type you do!</h2>
         <!-- Animal and Plant sighting forms -->
-        <div id="animalForm" style="display:none;">
-            <h2>Report Animal Sighting</h2>
-            <form id="animalSightingForm" action="#" class="sighting-form">
-                <!-- Form fields for reporting animal sightings -->
-            </form>
-        </div>
-        <div id="plantForm" style="display:none;">
-            <h2>Report Plant Sighting</h2>
-            <form id="plantSightingForm" action="#" class="sighting-form">
-                <!-- Form fields for reporting plant sightings -->
-            </form>
+        <div class="form-container">
+            <div id="animalForm" class="popup" style="display:none;">
+                <span class="close" onclick="closeForm('animalForm')">x</span>
+                <h2>Report Animal Sighting</h2>
+                <form id="animalSightingForm" action="#" class="sighting-form">
+                    <label for="animalName">Name:</label>
+                    <input type="text" id="animalName" name="animalName" required>
+                    <label for="animalSpecies">Species:</label>
+                    <input type="text" id="animalSpecies" name="animalSpecies" required>
+                    <label for="animalRegion">Location:</label>
+                    <input type="text" id="animalRegion" name="animalRegion" required>
+                    <label for="date">Date Sighted:</label>
+                    <input type="text" id="date" name="date" required>
+                    <button type="submit" onclick="closeForm('animalForm')">Submit</button>
+                </form>
+            </div>
+            <div id="plantForm" class="popup" style="display:none;">
+                <span class="close" onclick="closeForm('plantForm')">x</span>
+                <h2>Report Plant Sighting</h2>
+                <form id="plantSightingForm" action="#" class="sighting-form">
+                    <label for="plantName">Name:</label>
+                    <input type="text" id="plantName" name="plantName" required>
+                    <label for="plantSpecies">Species:</label>
+                    <input type="text" id="plantSpecies" name="plantSpecies" required>
+                    <label for="plantRegion">Location:</label>
+                    <input type="text" id="plantRegion" name="plantRegion" required>
+                    <label for="date">Date Sighted:</label>
+                    <input type="text" id="date" name="date" required>
+                    <button type="submit" onclick="closeForm('plantForm')">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -59,6 +82,10 @@
         function showPlantForm() {
             document.getElementById("animalForm").style.display = "none";
             document.getElementById("plantForm").style.display = "block";
+        }
+
+        function closeForm(formId) {
+            document.getElementById(formId).style.display = "none";
         }
     </script>
 
