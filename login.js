@@ -21,11 +21,8 @@ function login() {
                 if (xhr.responseText === "valid") {
                     window.location.href = "index.html";
                 } else {
-                    window.location.href = "index.html";
                     alert("Invalid username or password");
                 }
-            } else {
-                alert("Error: " + xhr.statusText);
             }
         };
 
