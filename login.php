@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 }
 
 // Prepare SQL query using prepared statements to prevent SQL injection
-$stmt = $conn->prepare("SELECT * FROM logging WHERE username=? AND password=?");
+$stmt = $conn->prepare("SELECT * FROM users WHERE username=? AND password=?");
 $stmt->bind_param("ss", $username, $password);
 $stmt->execute();
 $result = $stmt->get_result();
