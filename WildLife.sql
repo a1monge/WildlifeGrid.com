@@ -1,6 +1,6 @@
 
 USE WildLife;
-
+SELECT * FROM users;
 CREATE TABLE sightings (
     sighting_id INT AUTO_INCREMENT PRIMARY KEY,
     location VARCHAR(255),
@@ -84,44 +84,24 @@ VALUES
     (1000028, 'London Fox', 'Vulpes vulpes', 'Animal', 35),
     (2000026, 'NYC Central Park Maple', 'Acer saccharum', 'Plant', 36);
 
-
+DROP TABLE users;
+SHOW COLUMNS FROM users;
 CREATE TABLE users (
-    user_id INT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255),
-    email VARCHAR(255)
-);
-
-CREATE TABLE logging (
-    user_id INT PRIMARY KEY,
-    username VARCHAR(255),
+    email VARCHAR(255),
     password VARCHAR(255)
 );
 
-INSERT INTO logging (user_id, username, password)
+INSERT INTO users (user_id, username, email, password)
 VALUES 
-    (1, 'Ericdchiu', 'password'),
-    (2, 'JaKobeG', 'password'),
-    (3, 'AlexMonge', 'password'),
-    (4, 'VaiteAsmi', 'password'),
-    (5, 'CerdaV', 'password'),
-    (6, 'SilvaA', 'password');
+    (1, 'Ericdchiu', 'ericchiu@ttu.edu', 'password'),
+    (2, 'JaKobeG', 'jakgriff@ttu.edu', 'password'),
+    (3, 'AlexMonge', 'alexm@gmail.com', 'password'),
+    (4, 'VaiteAsmi', 'vaitemi@hotmail.com', 'password'),
+    (5, 'CerdaV', 'victoriac@yahoo.com', 'password'),
+    (6, 'SilvaA', 'adrisilva@gmail.com', 'password');
 
-CREATE TABLE signup (
-    user_id INT PRIMARY KEY,
-    username VARCHAR(255),
-    email VARCHAR(255),
-    password VARCHAR(255);
-
-);
-
-INSERT INTO users (user_id, username, email)
-VALUES 
-    (1, 'Ericdchiu', 'ericchiu@ttu.edu'),
-    (2, 'JaKobeG', 'jakgriff@ttu.edu'),
-    (3, 'AlexMonge', 'alexm@gmail.com'),
-    (4, 'VaiteAsmi', 'vaitemi@hotmail.com'),
-    (5, 'CerdaV', 'victoriac@yahoo.com'),
-    (6, 'SilvaA', 'adrisilva@gmail.com');
 
 INSERT INTO users (user_id, username, email)
 VALUES 
