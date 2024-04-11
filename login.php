@@ -9,7 +9,7 @@ $username = $_POST["username"];
 $password = $_POST["password"];
 
 // Connect to the MySQL database
-$conn = new mysqli("127.0.0.1", "root", "MONale014782!", "wildlife");
+$conn = new mysqli("127.0.0.1", "root", "password", "wildlife");
 
 // Check for errors
 if ($conn->connect_error) {

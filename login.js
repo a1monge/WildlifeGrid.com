@@ -20,7 +20,8 @@ function login() {
             if (xhr.status === 200) {
                 if (xhr.responseText === "valid") {
                     window.location.href = "index.html";
-                } else {
+                }
+                else {
                     alert("Invalid username or password");
                 }
             }
