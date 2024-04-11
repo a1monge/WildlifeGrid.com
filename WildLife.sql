@@ -1,6 +1,9 @@
 
 USE WildLife;
+drop TABLE species;
+drop TABLE sightings;
 SELECT * FROM users;
+
 CREATE TABLE sightings (
     sighting_id INT AUTO_INCREMENT PRIMARY KEY,
     location VARCHAR(255),
@@ -42,6 +45,7 @@ VALUES
     ('New York City, USA', '2024-08-05', 34, 2000013);
 
 
+drop TABLE species;
 CREATE TABLE species (
     species_id INT PRIMARY KEY,
     species_name VARCHAR(255),
@@ -52,7 +56,7 @@ CREATE TABLE species (
 
 INSERT INTO species (species_id, species_name, scientific_name, sightings, kingdom)
 VALUES 
-    (1000000, 'Black-tailed Prairie Dog', 'Cynomys ludovicianus', 33, 'Animal'),
+    (1000000, 'Black tailed Prairie Dog', 'Cynomys ludovicianus', 33, 'Animal'),
     (1000001, 'Plains Leopard Frog', 'Lithobates blairi', 21, 'Animal'),
     (1000002, 'Prairie Lizard', 'Sceloporus consobrinus', 8, 'Animal'),
     (1000003, 'White-crowned sparrow', 'Zonotrichia leucophrys', 4, 'Animal'),
@@ -85,7 +89,6 @@ VALUES
     (2000026, 'NYC Central Park Maple', 'Acer saccharum', 'Plant', 36);
 
 DROP TABLE users;
-SHOW COLUMNS FROM users;
 CREATE TABLE users (
     user_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255),

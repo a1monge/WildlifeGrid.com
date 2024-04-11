@@ -35,10 +35,10 @@
             "server": "127.0.0.1",
             "port": 3306,
             "driver": "MySQL",
-            "name": "WildLife",
-            "username": "root",
+            "name": "WildLife1",
             "database": "wildlife",
-            "password": "123"
+            "username": "root",
+            "password": "password"
         }
     ]
 }
