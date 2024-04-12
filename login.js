@@ -19,6 +19,7 @@ function login() {
             console.log(xhr.responseText); // Log the response for debugging
             if (xhr.status === 200) {
                 if (xhr.responseText === "valid") {
+                    alert("Login Succesful");
                     window.location.href = "index.html";
                 }
                 else {
