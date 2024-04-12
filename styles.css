@@ -6,19 +6,19 @@ body {
     /* Hide horizontal scrollbar */
     overflow-y: auto;
     /* Add vertical scrollbar if necessary */
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-style: normal;
     background-color: #d3efa4;
     /* Light grey background */
-    color: #333;
+    color: #0a0a0a;
     /* Dark grey text */
     
 }
 
-.anton-regular {
-    font-family: "Anton", sans-serif;
-    font-weight: 400;
+.oswald-regular {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-style: normal;
   }
 
@@ -67,9 +67,8 @@ header {
 }
 
 h1 {
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
-    font-style: bold;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-size: 85px;
     color: #181a19;
     /* Darker green text */
@@ -78,8 +77,8 @@ h1 {
 }
 
 h2 {
-    color: #181a19;
-    font-style: bold;
+    color: #141515;
+    /*font-style: bold;
     /* Darker green text */
     font-size: 33px;
     align-items: center;
@@ -143,6 +142,7 @@ button {
     background-color: transparent;
     /* Light green background */
     padding: 40px;
+    text-align: center;
     border-radius: 10px;
 }
 
@@ -279,8 +279,8 @@ ul {
 }
 
 .text {
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-style: bold;
     position: absolute;
     top: 50%;
@@ -299,7 +299,8 @@ ul {
 }
 
 .search h2 {
-    color: #303634;
+    color: #212423;
+    text-align: center;
     /* Dark grey text */
    /* font-weight: bold; */
     /* Optionally make the text bold */
@@ -343,7 +344,8 @@ ul {
     color: rgb(38, 43, 39);
     z-index: 2;
     font-size: 50px;
-    font-family: "Protest Guerrilla" , sans-serif; 
+    font-style: bold;
+    font-family: "Oswald" , sans-serif; 
 }
 
 .button {
@@ -532,7 +534,7 @@ ul {
 .search-text {
     text-align: center;
     /* Center align the text */
-    color: #000;
+    color: #191717;
     font-size: 23px;
     /* Bold font */
     margin-top: 10px;
