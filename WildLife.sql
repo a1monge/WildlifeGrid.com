@@ -1,3 +1,4 @@
+
 USE WildLife;
 
 CREATE TABLE sightings (
@@ -88,6 +89,29 @@ CREATE TABLE users (
     user_id INT PRIMARY KEY,
     username VARCHAR(255),
     email VARCHAR(255)
+);
+
+CREATE TABLE logging (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(255),
+    password VARCHAR(255)
+);
+
+INSERT INTO logging (user_id, username, email)
+VALUES 
+    (1, 'Ericdchiu', 'password'),
+    (2, 'JaKobeG', 'password'),
+    (3, 'AlexMonge', 'password'),
+    (4, 'VaiteAsmi', 'password'),
+    (5, 'CerdaV', 'password'),
+    (6, 'SilvaA', 'password');
+
+CREATE TABLE signup (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255);
+
 );
 
 INSERT INTO users (user_id, username, email)

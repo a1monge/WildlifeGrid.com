@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <script src="login.js"></script> <!-- Include login.js -->
 </head>
 
 <body class="login-page">
@@ -28,19 +29,20 @@
     <img src="img/logo.png" alt="Logo" class="logo"> <!-- Use class "logo" instead of "login-page" -->
 
     <div class="container">
-        <form action="#" class="login-form">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            <button type="submit" class="login-submit-btn">Login</button>
+        <form id="login-form" class="login-form">
+            <!-- Submit form to login.php -->
+            <label for="login-email">Username:</label>
+            <input type="text" id="login-email" name="username" required>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+            <button type="submit" id="login-btn" class="login-submit-btn">Login</button>
         </form>
         <div class="signup-link">
             <!-- Added signup button -->
-            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+            <p>Don' t have an account? <a href="signup.html">Sign Up</a></p>
         </div>
     </div>
-
+    <script src="login.js"></script>
 </body>
 
 </html>
