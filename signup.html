@@ -8,15 +8,13 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Protest+Guerrilla&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="signup.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
 
 <body class="signup-page">
 
     <header class="birds-ribbon">
+        <div class="bird bird1"></div> <!-- Add the bird here -->
         <div class="white-text">
-            <a href="index.html">Home</a>
             <a class="nav-link active" href="login.html">Login</a>
             <a href="reportSightings.html">Report Sighting</a>
             <a href="map.html">Map</a>
@@ -28,13 +26,13 @@
     <img src="img/logo.png" alt="Logo" class="logo ">
 
     <div class="container">
-        <form id="signup-form" class="signup-form">
-            <label for="signup-email">Email:</label>
-            <input type="email" id="signup-email" name="email" required> <!-- Added email field -->
-            <label for="signup-name">Username:</label>
-            <input type="text" id="signup-name" name="username" required>
-            <label for="signup-password">Password:</label>
-            <input type="password" id="signup-password" name="password" required>
+        <form action="#" class="signup-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required> <!-- Added email field -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
             <button type="submit" class="signup-submit-btn">Sign Up</button>
         </form>
     </div>
