@@ -2,35 +2,29 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WildlifeGrid.com</title>
     <link rel="stylesheet" href="styles.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Guerrilla&display=swap" rel="stylesheet">
-
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <header class="birds-ribbon">
-        <div class="white-text">
-            <a class="nav-link active" href="index.html">Home</a>
-            <a href="login.html">Login</a>
-            <a href="reportSightings.html">Report Sighting</a>
-            <a href="map.html">Map</a>
-            <a href="search.html">Search</a>
-
-        </div>
-    </header>
-
+<header class="birds-ribbon">
+    <div class="bird bird1"></div> <!-- Add the bird here -->
+    <div class="white-text">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="reportSightings.html">Report Sighting</a>
+        <a href="map.html">Map</a>
+        <a href="search.html">Search</a>
+    </div>
+</header>
+    
     <div class="slideshow-container">
         <img src="img/logo.png" alt="Your Logo" class="logo">
         <div class="slide fade">
@@ -47,44 +41,48 @@
 
 
 
-    <section class="search">
-        <h2>Welcome to our platform!</h2>
-        <h2>We're on a mission to track and celebrate the biodiversity around us.
-            Report sightings, join our community, and help protect our planet's wildlife.</h2>
-        </h2>
-    </section>
+       <section class="search">
+            <h2>Animals and Plants</h2>
+        </section>
 
-    <div class="card-container">
+
+           <!-- Cards -->
+        <!-- Cards -->
         <div class="card-container">
-            <a href="reportSightings.html" class="button">
-                <div class="card">
-                    <img src="img/bgreport.png" alt="Report Sightings">
-                    <div class="text">REPORT SIGHTING</div>
+            <div class="card">
+                <img src="img/report_sightings.jpg" alt="Report Sightings">
+                <div class="text">
+                    <div class="button-container">
+                        <!-- Added button-container -->
+                        <a href="reportSightings.html" class="button">Report Sightings</a>
+                    </div>
                 </div>
-            </a>
-
-            <a href="map.html" class="button">
-                <div class="card">
-                    <img src="img/bgmap.png" alt="Map">
-                    <div class="text">MAP</div>
+            </div>
+            <div class="card">
+                <img src="img/map.jpg" alt="Map">
+                <div class="text">
+                    <div class="button-container">
+                        <!-- Added button-container -->
+                        <a href="map.html" class="button">Map</a>
+                    </div>
                 </div>
-            </a>
-
-            <a href="search.html" class="button">
-                <div class="card">
-                    <img src="img/bgsearch.png" alt="Search">
-                    <div class="text">SEARCH</div>
+            </div>
+            <div class="card">
+                <img src="img/green-search-icon.png" alt="Search">
+                <div class="text">
+                    <div class="button-container">
+                        <!-- Added button-container -->
+                        <a href="search.html" class="button">Search</a>
+                    </div>
                 </div>
-            </a>
+            </div>
         </div>
 
-        <!-- Add more cards as needed -->
+        
+    
     </div>
 
-
-    </div>
-
-    <!-- <section class="featured">
+       <!-- <section class="featured">
             <h2>Featured Content</h2>
             <div class="featured-content">
                 
@@ -114,22 +112,22 @@
             <p>Explore recent sightings of animals and plants in your area!</p>
         </section>-->
 
-    <!--<section class="newsletter">
+        <section class="newsletter">
             <h2>Subscribe to Our Newsletter</h2>
             <p>Stay updated with the latest news, events, and conservation efforts.</p>
             <form>
                 <input type="email" placeholder="Enter your email address">
                 <button type="submit">Subscribe</button>
             </form>
-        </section>-->
+        </section>
 
-    <section class="search">
-        <h2>Connect with Us</h2>
-        <p>Follow us on social media for more updates and inspiration!</p>
-
-    </section>
+        <section class="social">
+            <h2>Connect with Us</h2>
+            <p>Follow us on social media for more updates and inspiration!</p>
+            <!-- Social media icons or links go here -->
+        </section>
     </div>
-    <script src="slides.js"></script>
+<script src="slides.js"></script>
 
 </body>
 
