@@ -1,5 +1,8 @@
 
 USE WildLife;
+drop TABLE species;
+drop TABLE sightings;
+SELECT * FROM users;
 
 CREATE TABLE sightings (
     sighting_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -42,6 +45,7 @@ VALUES
     ('New York City, USA', '2024-08-05', 34, 2000013);
 
 
+drop TABLE species;
 CREATE TABLE species (
     species_id INT PRIMARY KEY,
     species_name VARCHAR(255),
@@ -52,7 +56,7 @@ CREATE TABLE species (
 
 INSERT INTO species (species_id, species_name, scientific_name, sightings, kingdom)
 VALUES 
-    (1000000, 'Black-tailed Prairie Dog', 'Cynomys ludovicianus', 33, 'Animal'),
+    (1000000, 'Black tailed Prairie Dog', 'Cynomys ludovicianus', 33, 'Animal'),
     (1000001, 'Plains Leopard Frog', 'Lithobates blairi', 21, 'Animal'),
     (1000002, 'Prairie Lizard', 'Sceloporus consobrinus', 8, 'Animal'),
     (1000003, 'White-crowned sparrow', 'Zonotrichia leucophrys', 4, 'Animal'),
@@ -84,13 +88,15 @@ VALUES
     (1000028, 'London Fox', 'Vulpes vulpes', 'Animal', 35),
     (2000026, 'NYC Central Park Maple', 'Acer saccharum', 'Plant', 36);
 
-
+DROP TABLE users;
 CREATE TABLE users (
-    user_id INT PRIMARY KEY,
+    user_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255),
-    email VARCHAR(255)
+    email VARCHAR(255),
+    password VARCHAR(255)
 );
 
+<<<<<<< HEAD
 CREATE TABLE logging (
     user_id INT PRIMARY KEY,
     username VARCHAR(255),
@@ -115,13 +121,17 @@ CREATE TABLE signup (
 );
 
 INSERT INTO users (user_id, username, email)
+=======
+INSERT INTO users (user_id, username, email, password)
+>>>>>>> 95b9709cbdb450e8df9d6db0b3d0b948db79faaa
 VALUES 
-    (1, 'Ericdchiu', 'ericchiu@ttu.edu'),
-    (2, 'JaKobeG', 'jakgriff@ttu.edu'),
-    (3, 'AlexMonge', 'alexm@gmail.com'),
-    (4, 'VaiteAsmi', 'vaitemi@hotmail.com'),
-    (5, 'CerdaV', 'victoriac@yahoo.com'),
-    (6, 'SilvaA', 'adrisilva@gmail.com');
+    (1, 'Ericdchiu', 'ericchiu@ttu.edu', 'password'),
+    (2, 'JaKobeG', 'jakgriff@ttu.edu', 'password'),
+    (3, 'AlexMonge', 'alexm@gmail.com', 'password'),
+    (4, 'VaiteAsmi', 'vaitemi@hotmail.com', 'password'),
+    (5, 'CerdaV', 'victoriac@yahoo.com', 'password'),
+    (6, 'SilvaA', 'adrisilva@gmail.com', 'password');
+
 
 INSERT INTO users (user_id, username, email)
 VALUES 
@@ -145,3 +155,45 @@ VALUES
     (32, 'SydneyTracker', 'sydneytracker@example.com'),
     (33, 'LondonDiscoverer', 'londondiscoverer@example.com'),
     (34, 'NYCSpotter', 'nycspotter@example.com');
+
+
+
+CREATE TABLE cities (
+    id INT(4) UNSIGNED,
+    city_name VARCHAR(50),
+    state VARCHAR(50),
+    latitude DECIMAL(8,6),
+    longitude DECIMAL(9,6)
+);
+
+INSERT INTO cities (id, city_name, state, latitude, longitude) VALUES
+(1001, 'Washington D.C.', 'DC', 38.8951, -77.0364),
+(1002, 'New York City', 'NY', 40.7128, -74.0060),
+(1003, 'Los Angeles', 'CA', 34.0522, -118.2437),
+(1004, 'Chicago', 'IL', 41.8781, -87.6298),
+(1005, 'Houston', 'TX', 29.7604, -95.3698),
+(1006, 'Philadelphia', 'PA', 39.9526, -75.1652),
+(1007, 'Phoenix', 'AZ', 33.4484, -112.0740),
+(1008, 'San Antonio', 'TX', 29.4241, -98.4936),
+(1009, 'San Diego', 'CA', 32.7157, -117.1611),
+(1010, 'Dallas', 'TX', 32.7767, -96.7970),
+(1011, 'San Jose', 'CA', 37.3382, -121.8863),
+(1012, 'Austin', 'TX', 30.2672, -97.7431),
+(1013, 'Indianapolis', 'IN', 39.7684, -86.1581),
+(1014, 'Seattle', 'WA', 47.6062, -122.3321),
+(1015, 'Denver', 'CO', 39.7392, -104.9903),
+(1016, 'Boston', 'MA', 42.3601, -71.0589),
+(1017, 'Atlanta', 'GA', 33.7490, -84.3880),
+(1018, 'Miami', 'FL', 25.7617, -80.1918),
+(1019, 'Detroit', 'MI', 42.3314, -83.0458),
+(1020, 'Toronto', 'ON', 43.6511, -79.3832),
+(1021, 'Vancouver', 'BC', 49.2827, -123.1207),
+(1022, 'San Francisco', 'CA', 37.7749, -122.4194),
+(1023, 'Las Vegas', 'NV', 36.1699, -115.1398),
+(1024, 'New Orleans', 'LA', 29.9511, -90.0715),
+(1025, 'Portland', 'OR', 45.5051, -122.6750),
+(1026, 'Salt Lake City', 'UT', 40.7608, -111.8910),
+(1027, 'Honolulu', 'HI', 21.3069, -157.8583),
+(1028, 'Kansas City', 'MO', 39.0997, -94.5786),
+(1029, 'Minneapolis', 'MN', 44.9778, -93.2650),
+(1030, 'Anchorage', 'AK', 61.2181, -149.9003);
