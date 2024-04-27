@@ -6,13 +6,35 @@ body {
     /* Hide horizontal scrollbar */
     overflow-y: auto;
     /* Add vertical scrollbar if necessary */
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-style: normal;
     background-color: #d3efa4;
     /* Light grey background */
-    color: #333;
+    color: #0a0a0a;
     /* Dark grey text */
+
+}
+
+.oswald-regular {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.protest-guerrilla-regular {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.nav-link.active {
+    color: black;
+    /* Change color of active link to white */
+    background-color: white;
+    /* Highlight color for active link */
+
 }
 
 /* Track */
@@ -45,22 +67,22 @@ header {
 }
 
 h1 {
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
-    font-style: bold;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-size: 85px;
-    color: #00AA67;
+    color: #181a19;
     /* Darker green text */
     margin-bottom: 10px;
     /* Add some space below the title */
 }
 
 h2 {
-    color: #00AA67;
-    font-style: bold;
+    color: #141515;
+    /*font-style: bold;
     /* Darker green text */
     font-size: 33px;
     align-items: center;
+    text-align: center;
 }
 
 .slideshow-container h2 {
@@ -70,6 +92,13 @@ h2 {
 nav {
     display: flex;
     align-items: center;
+}
+
+button {
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 25px;
 }
 
 .login-btn {
@@ -113,6 +142,7 @@ nav {
     background-color: transparent;
     /* Light green background */
     padding: 40px;
+    text-align: center;
     border-radius: 10px;
 }
 
@@ -123,13 +153,15 @@ nav {
 .newsletter,
 .social {
     margin-top: 40px;
+    text-align: center;
+    color: #181a19;
 
 }
 
 .search-container {
     display: flex;
     justify-content: center;
-    /* Center the search bar horizontally */
+    /* Center the  bar horizontally */
 
     margin: 250px auto 0;
     /* Center the form horizontally and add 100px margin from the top */
@@ -247,8 +279,8 @@ ul {
 }
 
 .text {
-    font-family: "Protest Guerrilla", sans-serif;
-    font-weight: 400;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
     font-style: bold;
     position: absolute;
     top: 50%;
@@ -267,14 +299,13 @@ ul {
 }
 
 .search h2 {
-    color: #00AA67;
+    color: #212423;
+    text-align: center;
     /* Dark grey text */
-    font-weight: bold;
+    /* font-weight: bold; */
     /* Optionally make the text bold */
 }
 
-
-/* CSS for cards */
 .card-container {
     display: flex;
     justify-content: space-around;
@@ -289,44 +320,56 @@ ul {
     overflow: hidden;
 }
 
+.card button {
+    width: 100%;
+    height: 100%;
+    /* Set height to match the aspect ratio of the images */
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 .card img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    filter: blur(1.5px);
-    /* Adjust the blur intensity as needed */
 }
 
 .card .text {
     position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
-}
-
-.card .button-container {
-    position: absolute;
-    bottom: 70%;
-    left: 92%;
-    transform: translate(-50%, 50%);
-    width: 100%;
+    color: rgb(38, 43, 39);
+    z-index: 2;
+    font-size: 50px;
+    font-style: bold;
+    font-family: "Oswald", sans-serif;
 }
 
 .button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #4CAF50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    position: relative;
 }
 
-.button:hover {
-    background-color: #45a049;
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 239, 164, 0);
+    /* Adjust opacity as needed */
+    z-index: 1;
 }
+
+.button:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust hover opacity as needed */
+}
+
 
 .logo {
     position: absolute;
@@ -338,7 +381,7 @@ ul {
     /* Ensure the logo appears above the slides */
     width: 35%;
     /* Adjust the size of your logo */
-    height: 30%;
+    height: 35%;
 }
 
 .login-page .logo {
@@ -413,7 +456,7 @@ ul {
 .signup-form {
     width: 300px;
     /* Adjust width as needed */
-    margin: 170px auto 0;
+    margin: 210px auto 0;
     /* Center the form horizontally and add 100px margin from the top */
     padding: 10px;
     background-color: #d3efa4;
@@ -447,6 +490,7 @@ ul {
 
 .signup-form button,
 .login-form button {
+
     width: 100%;
     padding: 20px;
     background-color: #008E58;
@@ -493,7 +537,7 @@ ul {
 .search-text {
     text-align: center;
     /* Center align the text */
-    color: #000;
+    color: #191717;
     font-size: 23px;
     /* Bold font */
     margin-top: 10px;
@@ -525,7 +569,7 @@ ul {
     /* Adjust padding to increase button size */
     margin: 10px auto;
     /* Center buttons horizontally and add margin between them */
-    background-color: #2e7d32;
+    background-color: #008E58;
     /* Darker green button */
     color: white;
     border: none;
@@ -625,126 +669,4 @@ ul {
     margin: 0 auto;
     /* Center the button horizontally */
     color: white;
-}
-
-.picture_gallery{
-    width: 50%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    float: left;
-    padding-bottom: 3%;
-    top: -20px;
-}
-
-.gallery{
-    display: flex;
-    align-items: left;
-    justify-content: space-around;
-    float: left;
-    margin-top: 15%;
-}
-
-.gallery_box{
-    width: 150px;
-    height: 325px;
-    margin: 10px;
-    border-radius: 50px;
-    position: left;
-    background: url(img/prairie_1.png);
-    background-size: cover;
-    background-position: left;
-    float: left;
-    transition: width 0.8sd;
-    overflow: hidden;
-}
-
-.gallery_box:nth-child(2){ /* Creates another gallery_box without having to rewrite all previous parameters.*/
-    background: url(img/prairie_2.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.gallery_box:nth-child(3){
-    background: url(img/prairie_3.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.gallery_box:nth-child(4){
-    background: url(img/prairie_4.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.gallery_box:hover{
-    width: 500px;
-    cursor: pointer;
-
-}
-
-#left{
-    position: relative;
-    top: -10px;
-}
-
-.logo2 {
-    position: absolute;
-    top: 10%;
-    /* Adjust as needed */
-    left: 35%;
-    /* Adjust as needed */
-    z-index: 2;
-    /* Ensure the logo appears above the slides */
-    width: 35%;
-    /* Adjust the size of your logo */
-    height: 35%;
-}
-
-.text_box1{
-    width: 40%;
-    float: left;
-    margin-top: 200px;
-
-    display: flex;
-    justify-content: right;
-    text-align: left;
-    align-content: center;
-    min-height: 100vh;
-}
-
-@media screen and (max-width: 768px) {
-    .picture_gallery, .text_box1 {
-      width: 100%;
-      float: none;
-    }
-}
-
-h3{
-    color: #00AA67;
-    font-style: bold;
-    /* Darker green text */
-    font-size: 35px;
-    align-items: center;
-}
-
-
-/*  CSS for the list in prairie dog report page  */
-ul{
-    list-style-type: none;
-    padding-left: 25px;
-}
-
-li{
-    position: relative;
-    padding-left: 25px;
-}
-
-li::before{
-    content: ".";
-    color:#00AA67;
-    font-size: 1.2em;
-    position: absolute;
-    left:0;
 }

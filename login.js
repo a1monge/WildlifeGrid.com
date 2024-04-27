@@ -19,21 +19,12 @@ function login() {
             console.log(xhr.responseText); // Log the response for debugging
             if (xhr.status === 200) {
                 if (xhr.responseText === "valid") {
-<<<<<<< HEAD
                     window.location.href = "index.html";
                 } else {
                     alert("Invalid username or password");
                 }
             } else {
                 alert("Error: " + xhr.statusText);
-=======
-                    alert("Login Succesful");
-                    window.location.href = "index.html";
-                }
-                else {
-                    alert("Invalid username or password");
-                }
->>>>>>> 95b9709cbdb450e8df9d6db0b3d0b948db79faaa
             }
         };
 

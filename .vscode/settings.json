@@ -35,17 +35,10 @@
             "server": "127.0.0.1",
             "port": 3306,
             "driver": "MySQL",
-<<<<<<< HEAD
-            "name": "WildLife",
-            "username": "root",
-            "database": "wildlife",
-            "password": "MONale014782!"
-=======
             "name": "WildLife1",
             "database": "wildlife",
             "username": "root",
             "password": "password"
->>>>>>> 95b9709cbdb450e8df9d6db0b3d0b948db79faaa
         }
     ],
     "liveServer.settings.port": 5501
