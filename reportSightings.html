@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WildlifeGrid.com</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Guerrilla&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Guerrilla&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="styles.css">
+
 <body>
 
     <header class="birds-ribbon">
@@ -27,12 +29,13 @@
         <div class="image-container">
             <div>
                 <img src="img/fox.png" alt="Fox Picture" id="fox-animal">
-                <button onclick="showAnimalForm()">Animals</button>
             </div>
             <div>
                 <img src="img/plant.png" alt="Plant Picture" id="plant-plant">
-                <button onclick="showPlantForm()">Plants</button>
             </div>
+        </div>
+        <div class="button-container">
+            <button onclick="showAnimalForm()">Report</button>
         </div>
         <img src="img/reportlogo.png" alt="Report Logo" class="report-logo">
         <!-- Heading text on the bottom center of the page -->
@@ -42,51 +45,115 @@
             <div id="animalForm" class="popup" style="display:none;">
                 <span class="close" onclick="closeForm('animalForm')">x</span>
                 <h2>Report Animal Sighting</h2>
-                <form id="animalSightingForm" action="#" class="sighting-form">
+                <form id="animalSightingForm" class="sighting-form"
+                    onsubmit="submitForm(event, 'animalSightingForm', 'species_name')">
                     <label for="animalName">Name:</label>
                     <input type="text" id="animalName" name="animalName" required>
+
                     <label for="animalSpecies">Species:</label>
                     <input type="text" id="animalSpecies" name="animalSpecies" required>
+
                     <label for="animalRegion">Location:</label>
-                    <input type="text" id="animalRegion" name="animalRegion" required>
-                    <label for="date">Date Sighted:</label>
-                    <input type="text" id="date" name="date" required>
+                    <input type="text" id="animalRegion" name="animalRegion" placeholder="Lubbock, Texas" required>
+
+                    <label for="AnimalDate">Date Sighted:</label>
+                    <input type="text" id="AnimalDate" name="AnimalDate" placeholder="2024-02-05" required>
                     <button type="submit" onclick="closeForm('animalForm')">Submit</button>
                 </form>
             </div>
-            <div id="plantForm" class="popup" style="display:none;">
-                <span class="close" onclick="closeForm('plantForm')">x</span>
-                <h2>Report Plant Sighting</h2>
-                <form id="plantSightingForm" action="#" class="sighting-form">
-                    <label for="plantName">Name:</label>
-                    <input type="text" id="plantName" name="plantName" required>
-                    <label for="plantSpecies">Species:</label>
-                    <input type="text" id="plantSpecies" name="plantSpecies" required>
-                    <label for="plantRegion">Location:</label>
-                    <input type="text" id="plantRegion" name="plantRegion" required>
-                    <label for="date">Date Sighted:</label>
-                    <input type="text" id="date" name="date" required>
-                    <button type="submit" onclick="closeForm('plantForm')">Submit</button>
-                </form>
-            </div>
+
         </div>
     </div>
 
     <script>
         function showAnimalForm() {
             document.getElementById("animalForm").style.display = "block";
-            document.getElementById("plantForm").style.display = "none";
-        }
-
-        function showPlantForm() {
-            document.getElementById("animalForm").style.display = "none";
-            document.getElementById("plantForm").style.display = "block";
         }
 
         function closeForm(formId) {
             document.getElementById(formId).style.display = "none";
         }
     </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        // Fetch species names from the server
+        // Fetch species names from the server
+        document.addEventListener("DOMContentLoaded", function () {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://127.0.0.1/Project/WildlifeGrid.com/species.php");
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    speciesNames = response.species_names;
+                    scientificNames = response.scientific_names;
+
+                    // Initialize autocomplete on the name input
+                    $('#animalName').autocomplete({
+                        source: scientificNames
+                    });
+
+                    // Initialize autocomplete on the species input
+                    $('#animalSpecies').autocomplete({
+                        source: speciesNames
+                    });
+                } else {
+                    console.error('Error fetching species names:', xhr.statusText);
+                    // You might want to show a user-friendly error message here
+                }
+            };
+            xhr.onerror = function () {
+                console.error('Error fetching species names:', xhr.statusText);
+                // You might want to show a user-friendly error message here
+            };
+            xhr.send();
+        });
+
+    </script>
+
+    <script>
+        // Function to handle form submission
+        function submitForm(event, formId, speciesColumn) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Get the form data
+            var formData = $('#' + formId).serialize();
+
+            // Add location and date_sighted fields
+            var location = $('#' + formId + ' input[name="animalRegion"]').val();
+            var date_sighted = $('#' + formId + ' input[name="AnimalDate"]').val();
+            formData += '&location=' + location + '&date_sighted=' + date_sighted;
+
+            // Create a new XMLHttpRequest object
+            var xhr = new XMLHttpRequest();
+
+            // Configure the request
+            xhr.open('POST', 'http://localhost/Project/WildlifeGrid.com/species.php');
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+            // Set up event handlers for load, error, and abort
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    // Success handling
+                    console.log(xhr.responseText);
+                } else {
+                    // Error handling
+                    console.error('Error: ' + xhr.statusText);
+                }
+            };
+
+            xhr.onerror = function () {
+                // Error handling
+                console.error('Request failed');
+            };
+
+            // Send the request with form data and species column name
+            xhr.send(formData + '&speciesColumn=' + speciesColumn);
+        }
+    </script>
+
+
 
 </body>
 

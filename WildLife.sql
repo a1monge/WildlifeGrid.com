@@ -3,63 +3,21 @@ drop TABLE species;
 drop TABLE sightings;
 SELECT *
 FROM users;
+SELECT *
+FROM sightings;
+SELECT *
+FROM species;
 CREATE TABLE sightings (
     sighting_id INT AUTO_INCREMENT PRIMARY KEY,
     location VARCHAR(255),
     date_sighted DATE,
-    user_id INT,
     species_id INT,
     CONSTRAINT fk_species_id FOREIGN KEY (species_id) REFERENCES species(species_id)
 );
-INSERT INTO sightings (location, date_sighted, user_id, species_id)
-VALUES ('Lubbock, Texas', '2024-02-05', 1, 1000000),
-    ('Lubbock, Texas', '2024-02-10', 2, 1000001),
-    ('Lubbock, Texas', '2024-02-11', 3, 1000002),
-    ('Lubbock, Texas', '2024-02-13', 4, 1000003),
-    ('Lubbock, Texas', '2024-02-15', 5, 2000000),
-    ('Lubbock, Texas', '2024-02-17', 6, 2000001),
-    ('Lubbock, Texas', '2024-02-19', 4, 2000002),
-    ('Lubbock, Texas', '2024-02-22', 2, 2000003),
-    ('New York City, USA', '2024-05-01', 15, 1000004),
-    ('London, UK', '2024-05-05', 16, 2000004),
-    (
-        'Rio de Janeiro, Brazil',
-        '2024-05-10',
-        17,
-        1000005
-    ),
-    ('Sydney, Australia', '2024-05-15', 18, 2000005),
-    ('Nairobi, Kenya', '2024-05-20', 19, 1000006),
-    ('Paris, France', '2024-05-25', 20, 2000006),
-    ('Tokyo, Japan', '2024-06-01', 21, 1000007),
-    (
-        'Cape Town, South Africa',
-        '2024-06-05',
-        22,
-        2000007
-    ),
-    ('Sydney, Australia', '2024-06-10', 23, 1000008),
-    ('New York City, USA', '2024-06-15', 24, 2000008),
-    ('London, UK', '2024-06-20', 25, 1000009),
-    (
-        'Rio de Janeiro, Brazil',
-        '2024-06-25',
-        26,
-        2000009
-    ),
-    (
-        'Cape Town, South Africa',
-        '2024-07-01',
-        27,
-        1000010
-    ),
-    ('Tokyo, Japan', '2024-07-05', 28, 2000010),
-    ('Paris, France', '2024-07-10', 29, 1000011),
-    ('Nairobi, Kenya', '2024-07-15', 30, 2000011),
-    ('Moscow, Russia', '2024-07-20', 31, 1000012),
-    ('Sydney, Australia', '2024-07-25', 32, 2000012),
-    ('London, UK', '2024-08-01', 33, 1000013),
-    ('New York City, USA', '2024-08-05', 34, 2000013);
+INSERT INTO sightings (location, date_sighted, species_id)
+VALUES ('Lubbock, Texas', '2024-02-05', 1000000),
+    ('Lubbock, Texas', '2024-02-10', 1000001),
+    ('Lubbock, Texas', '2024-02-11', 1000002);
     
 drop TABLE species;
 CREATE TABLE species (

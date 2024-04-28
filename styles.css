@@ -544,33 +544,33 @@ ul {
     /* Add some top margin */
 }
 
-/* Add your CSS styles here */
-/* You can style the form elements, buttons, etc. according to your preferences */
-/* Add this to your styles.css file */
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.image-container div {
-    display: inline-block;
-    text-align: center;
+.image-container {
+    display: flex;
+    justify-content: center;
+    /* Center the items horizontally */
+    align-items: flex-start;
+    /* Align items to the top of the container */
     margin-top: 20px;
-    /* Center the contents horizontally */
 }
 
-.image-container button {
-    display: block;
-    /* Change display to block to ensure they stack vertically */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* Adjust as needed */
+}
+
+.button-container button {
     width: 200px;
-    /* Adjust width to desired size */
     padding: 15px;
-    /* Adjust padding to increase button size */
-    margin: 10px auto;
-    /* Center buttons horizontally and add margin between them */
     background-color: #008E58;
-    /* Darker green button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -669,4 +669,30 @@ ul {
     margin: 0 auto;
     /* Center the button horizontally */
     color: white;
+}
+
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    /* Position below the input field */
+    left: 0;
+    z-index: 1000;
+    /* Ensure it's above the pop-up box */
+    float: left;
+    display: none;
+    min-width: 160px;
+    padding: 4px 0;
+    margin: 0;
+    list-style: none;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+        0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+}
+
+.ui-autocomplete.ui-front {
+    z-index: 10000;
+    /* Ensure it's above the pop-up box */
 }
