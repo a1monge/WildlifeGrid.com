@@ -2,26 +2,26 @@
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
- #map {
-    height: 120%;
-    margin-top: 20%;
-    /*margin-left: 35%;
-    margin-right: 35%;*/
-    align-content: center;
-    padding-left: 40%;
-    width: 1000px;
-    display: flex;
-    /*justify-content: space-evenly;
-    float: right;
-    overflow: hidden;*/
-  }
-  
-  /* 
+#map {
+  height: 100vh;
+  /* Set height to 100% of the viewport height */
+  margin: 0;
+  /* Remove all margins */
+  padding: 0;
+  /* Remove all padding */
+  display: flex;
+  justify-content: center;
+  /* Center the map horizontally */
+  align-items: center;
+  /* Center the map vertically */
+}
+
+/* 
    * Optional: Makes the sample page fill the window. 
    */
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

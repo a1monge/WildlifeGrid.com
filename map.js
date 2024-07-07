@@ -24,7 +24,7 @@ async function initMap() {
   };
 
   new google.maps.Marker({
-    position: { lat: 33.576698, lng: -101.855072},
+    position: { lat: 33.576698, lng: -101.855072 },
     map,
     icon: image,
     shape: shape,
@@ -32,7 +32,7 @@ async function initMap() {
   });
 
   new google.maps.Marker({
-    position: { lat: 31.845682, lng: -102.367645},
+    position: { lat: 31.845682, lng: -102.367645 },
     map,
     icon: image,
     shape: shape,
@@ -40,7 +40,7 @@ async function initMap() {
   });
 
   new google.maps.Marker({
-    position: { lat: 28.63528 , lng: -106.08889},
+    position: { lat: 28.63528, lng: -106.08889 },
     map,
     icon: image,
     shape: shape,
@@ -48,7 +48,7 @@ async function initMap() {
   });
 
   new google.maps.Marker({
-    position: { lat: 33.5842 , lng:  -102.3700},
+    position: { lat: 33.5842, lng: -102.3700 },
     map,
     icon: image,
     shape: shape,
@@ -56,7 +56,7 @@ async function initMap() {
   });
 
   new google.maps.Marker({
-    position: { lat: 32.2393 , lng:  -101.4718},
+    position: { lat: 32.2393, lng: -101.4718 },
     map,
     icon: image,
     shape: shape,
@@ -64,7 +64,7 @@ async function initMap() {
   });
 
   new google.maps.Marker({
-    position: { lat: 30.358494 , lng: -103.661694},
+    position: { lat: 30.358494, lng: -103.661694 },
     map,
     icon: image,
     shape: shape,
@@ -74,4 +74,3 @@ async function initMap() {
 }
 
 initMap();
-
