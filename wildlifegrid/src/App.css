@@ -1,0 +1,698 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+  overflow-y: auto;
+  /* Add vertical scrollbar if necessary */
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  background-color: #d3efa4;
+  /* Light grey background */
+  color: #0a0a0a;
+  /* Dark grey text */
+
+}
+
+.oswald-regular {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.protest-guerrilla-regular {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.nav-link.active {
+  color: black;
+  /* Change color of active link to white */
+  background-color: white;
+  /* Highlight color for active link */
+
+}
+
+/* Track */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #00AA67;
+  /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+  /* Color of the scrollbar handle on hover */
+}
+
+header {
+  background-color: transparent;
+  /* Remove the background color */
+  padding: 40px;
+  /* Increase the padding to make the header taller */
+  color: #00AA67;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-size: 85px;
+  color: #181a19;
+  /* Darker green text */
+  margin-bottom: 10px;
+  /* Add some space below the title */
+}
+
+h2 {
+  color: #141515;
+  /*font-style: bold;
+    /* Darker green text */
+  font-size: 33px;
+  align-items: center;
+  text-align: center;
+}
+
+.slideshow-container h2 {
+  color: white;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+}
+
+.login-btn {
+  background-color: #2e7d32;
+  /* Darker green button */
+  color: white;
+  border: none;
+  padding: 0px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.login-btn:hover {
+  background-color: #1b5e20;
+  /* Dark green on hover */
+}
+
+.container {
+  width: 100%;
+  /* Adjusted width to cover the entire page */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  padding: 0;
+  /* Removed padding */
+  max-width: none;
+  /* Removed max-width property */
+}
+
+.hero {
+  background-color: transparent;
+  /* Gradient from light green to darker green */
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.search,
+.featured {
+  background-color: transparent;
+  /* Light green background */
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.resources,
+.community,
+.reporting,
+.map,
+.newsletter,
+.social {
+  margin-top: 40px;
+  text-align: center;
+  color: #181a19;
+
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  /* Center the  bar horizontally */
+
+  margin: 250px auto 0;
+  /* Center the form horizontally and add 100px margin from the top */
+  padding: 20px;
+
+  /* Add some top margin for spacing */
+}
+
+.search-container input[type="text"] {
+  width: 300px;
+  /* Adjust the width as needed */
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  /* Remove border-radius */
+}
+
+.search-container button {
+  background-color: #2e7d32;
+  /* Darker green button */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #1b5e20;
+  /* Dark green on hover */
+}
+
+.search-container button i {
+  font-size: 20px;
+  /* Adjust the size of the icon */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resources ul li {
+  margin-bottom: 10px;
+}
+
+.community a,
+.reporting a {
+  background-color: #2e7d32;
+  /* Darker green button */
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.community a:hover,
+.reporting a:hover {
+  background-color: #1b5e20;
+  /* Dark green on hover */
+}
+
+.newsletter form {
+  display: flex;
+}
+
+.newsletter input[type="email"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.newsletter button {
+  background-color: #2e7d32;
+  /* Darker green button */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.newsletter button:hover {
+  background-color: #1b5e20;
+  /* Dark green on hover */
+}
+
+.birds-ribbon {
+  background-color: #00AA67;
+  /* Sage green color */
+  padding: 20px;
+  /* Adjusted padding */
+  color: white;
+  /* Text color */
+  text-align: center;
+  /* Center-align text */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  /* Set width to 100% to cover the entire page */
+  height: 700px;
+  /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+}
+
+.text {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  font-style: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #00AA67;
+  font-size: 24px;
+  /* Add other styles as needed */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search h2 {
+  color: #212423;
+  text-align: center;
+  /* Dark grey text */
+  /* font-weight: bold; */
+  /* Optionally make the text bold */
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card {
+  flex-basis: 20%;
+  border-radius: 10px;
+  position: relative;
+  margin: 0 5px;
+  overflow: hidden;
+}
+
+.card button {
+  width: 100%;
+  height: 100%;
+  /* Set height to match the aspect ratio of the images */
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: rgb(38, 43, 39);
+  z-index: 2;
+  font-size: 50px;
+  font-style: bold;
+  font-family: "Oswald", sans-serif;
+}
+
+.button {
+  position: relative;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(211, 239, 164, 0);
+  /* Adjust opacity as needed */
+  z-index: 1;
+}
+
+.button:hover::before {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust hover opacity as needed */
+}
+
+
+.logo {
+  position: absolute;
+  top: 30%;
+  /* Adjust as needed */
+  left: 35%;
+  /* Adjust as needed */
+  z-index: 2;
+  /* Ensure the logo appears above the slides */
+  width: 35%;
+  /* Adjust the size of your logo */
+  height: 35%;
+}
+
+.login-page .logo {
+  position: absolute;
+  top: 80px;
+  /* Adjust as needed */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  z-index: 2;
+  /* Ensure the logo appears above the forms */
+}
+
+/* Styles specific to signup page */
+.signup-page .logo {
+  position: absolute;
+  top: 80px;
+  /* Adjust as needed */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  z-index: 2;
+  /* Ensure the logo appears above the forms */
+}
+
+.search-page .logo {
+  position: absolute;
+  top: 90px;
+  /* Adjust as needed */
+  left: 50%;
+  /* Center horizontally */
+  transform: translateX(-50%);
+  z-index: 2;
+  /* Ensure the logo appears above the forms */
+  width: 400px;
+  /* Adjust the width as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  /* Set width to 100% to cover the entire page */
+  height: 700px;
+  /* Adjust height as needed */
+  overflow: hidden;
+}
+
+.white-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 25px;
+  /* Adjust the font size as needed */
+}
+
+.white-text a {
+  color: black;
+  text-decoration: none;
+  margin: 0 10px;
+  /* Adjust spacing between links */
+}
+
+
+
+/* Add this to your styles.css file */
+
+.login-form,
+.signup-form {
+  width: 300px;
+  /* Adjust width as needed */
+  margin: 210px auto 0;
+  /* Center the form horizontally and add 100px margin from the top */
+  padding: 10px;
+  background-color: #d3efa4;
+  /* White background */
+  border-radius: 10px;
+  /* Shadow effect */
+}
+
+
+
+.signup-form label,
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #333333;
+  /* Darker text color */
+}
+
+.signup-form input[type="email"],
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 93%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  /* Light gray border */
+  border-radius: 5px;
+}
+
+.signup-form button,
+.login-form button {
+
+  width: 100%;
+  padding: 20px;
+  background-color: #008E58;
+  /* Sage green color */
+  color: #ffffff;
+  /* White text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-link {
+  text-align: center;
+  /* Center align the text */
+  color: #000;
+  font-size: 23px;
+  margin-top: 10px;
+  /* Add some top margin */
+}
+
+.search-container button {
+  background-color: #2e7d32;
+  /* Darker green button */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 0px;
+  /* Set border-radius to 0 to remove rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #1b5e20;
+  /* Dark green on hover */
+}
+
+.search-container button i {
+  font-size: 20px;
+  /* Adjust the size of the icon */
+}
+
+.search-text {
+  text-align: center;
+  /* Center align the text */
+  color: #191717;
+  font-size: 23px;
+  /* Bold font */
+  margin-top: 10px;
+  /* Add some top margin */
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  /* Center the items horizontally */
+  align-items: flex-start;
+  /* Align items to the top of the container */
+  margin-top: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* Adjust as needed */
+}
+
+.button-container button {
+  width: 200px;
+  padding: 15px;
+  background-color: #008E58;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.bottom-heading {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #333;
+  /* Dark grey text */
+  font-size: 24px;
+  /* Adjust as needed */
+}
+
+.report-logo {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  width: 20%;
+  /* Adjust as needed */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+#fox-animal,
+#plant-plant {
+  display: inline-block;
+  /* Change display to inline-block */
+  width: 500px;
+  height: 300px;
+}
+
+
+
+/* Styles for sighting forms */
+.sighting-form {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.sighting-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: black;
+  /* Darker text color */
+}
+
+.sighting-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  /* Light gray border */
+  border-radius: 5px;
+}
+
+.sighting-form button {
+  background-color: #008E58;
+  /* Sage green color */
+  color: #00653F;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f6ffe6;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  width: 70%;
+  height: 60%;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.popup button {
+  display: block;
+  /* Ensure the button takes up the full width */
+  margin: 0 auto;
+  /* Center the button horizontally */
+  color: white;
+}
+
+.ui-autocomplete {
+  position: absolute;
+  top: 100%;
+  /* Position below the input field */
+  left: 0;
+  z-index: 1000;
+  /* Ensure it's above the pop-up box */
+  float: left;
+  display: none;
+  min-width: 160px;
+  padding: 4px 0;
+  margin: 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  overflow: auto;
+}
+
+.ui-autocomplete.ui-front {
+  z-index: 10000;
+  /* Ensure it's above the pop-up box */
+}
