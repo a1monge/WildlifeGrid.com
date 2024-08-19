@@ -696,3 +696,66 @@ ul {
     z-index: 10000;
     /* Ensure it's above the pop-up box */
 }
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        margin: 20px auto;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+
+    .login-btn,
+    .community a,
+    .reporting a {
+        padding: 8px 16px;
+    }
+
+    .search-container input[type="text"] {
+        width: 80%;
+    }
+
+    .container {
+        padding: 5px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
