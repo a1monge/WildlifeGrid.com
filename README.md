@@ -1,8 +1,8 @@
-# WildlifeGrid.com - Animal and Plant Distribution System
+# WildlifeGrid - Animal and Plant Distribution System
 
-## Project Overview
+## Overview
 
-WildlifeGrid.com is a web application developed as part of a collaborative effort to monitor and manage the distribution of flora and fauna. The project aims to raise awareness about local ecosystems and facilitate community involvement in wildlife monitoring.
+WildlifeGrid is a web-based platform designed to monitor the growth and migration of various flora and fauna. By leveraging user reports and mapping technology, it aims to raise awareness about local ecosystems and contribute to conservation efforts.
 
 ### Technologies Used
 - Front-end: HTML, CSS, JavaScript (Google Map JavaScript API)
@@ -10,20 +10,70 @@ WildlifeGrid.com is a web application developed as part of a collaborative effor
 
 ## Features
 
-- **User Interface**: Designed to be user-friendly to encourage exploration and reporting of wildlife sightings.
-- **Database**: Stores information on species, sightings, and user accounts to support data-driven functionalities.
-- **Google Map Integration**: Provides an interactive map for visualizing reported wildlife sightings.
-- **Species Recognition**: Utilizes dropdown menus and verification processes to ensure accurate species reporting.
-- **Educational Tools**: Offers educational resources and opportunities for users to learn about local biodiversity.
-- 
-### Local and Global Impact
+### **1. User Interaction**
 
-- **Educational Opportunities**: Provides educational resources to learn about local flora and fauna.
-- **Conservation Efforts**: Supports conservation efforts by collecting and analyzing wildlife data.
-- **Biodiversity Monitoring**: Contributes to biodiversity research and conservation through community-reported data.
+- **Sign-Up and Login System**: Secure authentication with username and password verification.
+- **Report Sightings**: Users can submit wildlife sightings, updating the database accordingly.
+- **Search Functionality**: Auto-complete search to find specific species in the database.
 
-## Issues and Future Enhancements
+### **2. Mapping and Data Visualization**
 
-- **Database Scalability**: Addressed challenges with database size and data input limitations.
-- **Automated Marker Placement**: Future plans include automating marker placement on the map based on reported sightings.
-- **Data Enrichment**: Aim to expand data collection to enhance system functionalities and accuracy.
+- **Google Maps API Integration**: Displays reported sightings with markers.
+- **Dynamic Species Tracking**: Users can see migration trends and biodiversity insights.
+
+### **3. Wildlife Information**
+
+- **Black-Tailed Prairie Dog Page**: Example of species reports and conservation efforts.
+- **Database of Flora and Fauna**: Provides species information, location data, and sightings history.
+
+## Technical Implementation
+
+### **Database Structure**
+
+- **Species Table**: Contains species details, scientific names, and sightings count.
+- **Sightings Table**: Stores reports with location, date, and species ID references.
+- **Users Table**: Maintains user credentials and account information.
+
+### **UML Diagrams**
+
+- **Class Diagram**: Defines user roles (Members, Editors, Administrators) and data relationships.
+- **Use Case Diagram**: Outlines user interactions with the system.
+- **Sequence Diagram**: Illustrates how users and the system interact dynamically.
+
+## Challenges and Solutions
+
+### **1. Species Recognition**
+
+- Implemented a dropdown list for species selection to avoid incorrect entries.
+- Admin verification process added for accuracy.
+
+### **2. Mapping and Location Data**
+
+- Developed a city-based latitude/longitude database for precise marker placement.
+- Currently using manual marker entry but aims to automate in the future.
+
+### **3. Data Entry Limitations**
+
+- Due to resource constraints, only a limited dataset was implemented.
+- Future improvements will involve expanding the database for better functionality.
+
+## Impact and Future Goals
+
+### **1. Educational Opportunities**
+
+- Provides an accessible learning tool about local wildlife and biodiversity.
+
+### **2. Conservation and Research**
+
+- Contributes data for wildlife conservation organizations.
+- Helps track species migration and environmental changes.
+
+### **3. Future Enhancements**
+
+- Automate marker generation for reported sightings.
+- Expand species database for a more comprehensive dataset.
+- Implement machine learning for species identification based on image uploads.
+
+## Conclusion
+
+WildlifeGrid.com serves as an interactive and educational platform for monitoring animal and plant distribution. Through user participation, mapping technology, and an extensive database, it fosters awareness and conservation efforts. Future development will focus on automation, scalability, and broader dataset integration.
