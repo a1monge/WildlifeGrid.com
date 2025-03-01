@@ -74,6 +74,14 @@ WildlifeGrid is a web-based platform designed to monitor the growth and migratio
 - Expand species database for a more comprehensive dataset.
 - Implement machine learning for species identification based on image uploads.
 
-## Conclusion
+### **Pictures of Website**
+![Alt text](diagram1.png)
 
-WildlifeGrid.com serves as an interactive and educational platform for monitoring animal and plant distribution. Through user participation, mapping technology, and an extensive database, it fosters awareness and conservation efforts. Future development will focus on automation, scalability, and broader dataset integration.
+![Alt text](relative/path/to/image.png)
+
+![Alt text](relative/path/to/image.png)
+
+![Alt text](relative/path/to/image.png)
+
+![Alt text](relative/path/to/image.png)
+
