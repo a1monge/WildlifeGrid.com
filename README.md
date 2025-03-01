@@ -77,11 +77,11 @@ WildlifeGrid is a web-based platform designed to monitor the growth and migratio
 ### **Pictures of Website**
 ![Alt text](diagram1.png)
 
-![Alt text](relative/path/to/image.png)
+![Alt text](wildlife2.png)
 
-![Alt text](relative/path/to/image.png)
+![Alt text](WILDLIFE3.png)
 
-![Alt text](relative/path/to/image.png)
+![Alt text](WILDLIFE4.png)
 
-![Alt text](relative/path/to/image.png)
+
 
